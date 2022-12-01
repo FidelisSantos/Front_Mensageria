@@ -20,13 +20,8 @@ export class MensagensService {
     return this.http.get<Messages[]>(url);
   }
 
-  async deleteMessage(idMessage:number): Promise<void>{
-    const url = `https://mensageria.azurewebsites.net/message/${idMessage}`;
-    try{
-      this.http.delete(url);
-    }catch{
-      return alert('Erro ao deletar');
-    }
-    
+  async postMessage(userReceiverId: number, message: string): Promise<void>{
+    const url = `https://mensageria.azurewebsites.net/message/${1}/${userReceiverId}`;
+    await this.http.post(url, message);
   }
 }

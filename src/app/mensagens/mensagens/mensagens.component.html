@@ -4,9 +4,10 @@
         {{user.name}}
         <div *ngFor="let message of messages" >
             <p class="issuer"*ngIf="isUser(message.userIssuerId, user.userModelId)"><strong >{{message.message}}</strong></p>
-            <p class="received" *ngIf="isUser(message.userReceiverId, user.userModelId)"><strong >{{message.message}}</strong><button (onclick)="deleteMessage(message.messageModelId)">x</button></p>
+            <p class="received" *ngIf="isUser(message.userReceiverId, user.userModelId)"><strong >{{message.message}}</strong></p>
         </div>
-        <textarea name="" id="" cols="20" rows="3" (value)="user.userModelId"></textarea>
+        <textarea name="messageUser" id="" cols="20" rows="3" (value)="user.userModelId" [(ngModel)]="messageUser"></textarea>
+        <button (click)="postMessage(user.userModelId )">Enviar</button>
       </div>
     </div>
   </div>
