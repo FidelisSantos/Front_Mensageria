@@ -3,3 +3,180 @@ input{
     margin: 8px 0;
     box-sizing: border-box;
 }
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(30deg, rgb(18, 183, 244),rgb(135, 94, 5));
+}
+
+
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 20vh;
+}
+
+
+span{
+    opacity: 0;
+    transition: all 5s ease;
+    display: inline-block;
+}
+
+span.fade{
+    opacity: 1;
+    color: rgb(251, 251, 244);
+}
+
+
+
+.acesso {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+}
+
+
+.texto h1 {
+    font-family: Roboto;
+    font-size: 5vh;
+}
+
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.form button{
+    font-family: Oswald;
+    margin-top: 15px;
+    width: 400px;
+    font-size: 45px;
+    box-shadow: 1px 1px 5px 1px #000;
+    border-radius: 30px;
+    background-color: rgb(201, 242, 175);
+}
+
+
+.form button:hover{
+    transform: scale(1.03);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.login_aluno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#voltar{
+    margin-top: 35px;
+    font-family: Oswald;
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 0px 9px 1px #000;
+    border-radius: 15px;
+    background-color: rgb(175, 242, 241);
+}
+
+
+
+
+
+
+.login{
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title_text{
+    font-size: 35px;
+    font-family: Roboto;
+    color: black;
+}
+
+
+.form_login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.form_login h1{
+    font-family: Roboto;
+}
+
+.form_login input{
+    margin-top: 15px;
+    font-family: Oswald;
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 0px 9px 1px #000;
+    border-radius: 15px;
+}
+
+.form_login button{
+    margin-top: 15px;
+    font-family: Oswald;
+    font-size: 30px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 0px 9px 1px #000;
+    border-radius: 15px;
+    background-color: rgb(226, 105, 78);
+}
+
+.form_login button:hover{
+    transition: all 1s ease;
+    transform: scale(1.03);
+}
+
+
+.form_login #voltar{
+    margin-top: 35px;
+    font-family: Oswald;
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 0px 9px 1px #000;
+    border-radius: 15px;
+    background-color: rgb(226, 105, 78);
+}
+
+
+.form_login #voltar:hover{
+    transition: all 1s ease;
+    transform: scale(1.03);
+}
+
+
