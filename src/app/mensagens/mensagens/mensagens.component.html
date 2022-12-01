@@ -1,14 +1,43 @@
-<div class="container text-center">
-    <div class="row">
-      <div class="col" *ngFor="let user of users" (value)="user.userModelId">
-        {{user.name}}
-        <div *ngFor="let message of messages" >
-            <p class="issuer"*ngIf="isUser(message.userIssuerId, user.userModelId)"><strong >{{message.message}}</strong></p>
-            <p class="received" *ngIf="isUser(message.userReceiverId, user.userModelId)"><strong >{{message.message}}</strong></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Permanent+Marker&family=Poppins:wght@300&family=Roboto:wght@100&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mensagens.component.css">
+    <title>Login API</title>
+</head>
+<body>
+    <div class="login">
+
+        <div class="title_text">
+            <h1>Tela de Mensagens</h1>
+       </div>
+
+       <div class="form_login">
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="column" id="linha" *ngFor="let user of users" (value)="user.userModelId" id="card">
+              {{user.name}}
+              <div *ngFor="let message of messages"  >
+                  <p class="issuer"*ngIf="isUser(message.userIssuerId, user.userModelId)"><strong >{{message.message}}</strong></p>
+                  <p class="received" *ngIf="isUser(message.userReceiverId, user.userModelId)"><strong >{{message.message}}</strong></p>
+              </div>
+              <textarea name="messageUser" id="" cols="20" rows="5" (value)="user.userModelId" [(ngModel)]="messageUser"></textarea>
+              <button (click)="postMessage(user.userModelId )">Enviar</button>
+            </div>
+          </div>
         </div>
-        <textarea name="messageUser" id="" cols="20" rows="3" (value)="user.userModelId" [(ngModel)]="messageUser"></textarea>
-        <button (click)="postMessage(user.userModelId )">Enviar</button>
-      </div>
-    </div>
-  </div>
- 
+
+
+       </div>
+   </div>
+
+
+
+</body>
+</html>
