@@ -1,1 +1,16 @@
-<p>cadastrar works!</p>
+<div>
+<h2>Cadastrar usuario</h2>
+<label >Informe o nome do usuário:</label>
+<input [(ngModel)]="name">
+
+<label >Informe o genero do usuário:</label>
+<input [(ngModel)]="genre">
+
+<label >Informe o email do usuário:</label>
+<input [(ngModel)]="email">
+
+<label >Informe a senha do usuário:</label>
+<input [(ngModel)]="password">
+<button (click)="cadastrar()" >Teste</button>
+</div>
+
