@@ -1,16 +1,40 @@
-<div>
-<h2>Cadastrar usuario</h2>
-<label >Informe o nome do usuário:</label>
-<input [(ngModel)]="name">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Permanent+Marker&family=Poppins:wght@300&family=Roboto:wght@100&family=Rubik:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="cadastrar.component.css">
+      <title>Login API</title>
+  </head>
+  <body>
+      <div class="login">
 
-<label >Informe o genero do usuário:</label>
-<input [(ngModel)]="genre">
+          <div class="title_text">
+              <h1>Tela de Login</h1>
+         </div>
 
-<label >Informe o email do usuário:</label>
-<input [(ngModel)]="email">
+         <div class="form_login">
+          <h2>Cadastrar usuario</h2>
+          <label >Informe o nome do usuário:</label>
+          <input [(ngModel)]="name">
 
-<label >Informe a senha do usuário:</label>
-<input [(ngModel)]="password">
-<button (click)="cadastrar()" >Teste</button>
-</div>
+          <label >Informe o genero do usuário:</label>
+          <input [(ngModel)]="genre">
 
+          <label >Informe o email do usuário:</label>
+          <input [(ngModel)]="email">
+
+          <label >Informe a senha do usuário:</label>
+          <input [(ngModel)]="password">
+          <button (click)="cadastrar()" >Teste</button>
+         </div>
+     </div>
+
+
+
+  </body>
+  </html>
