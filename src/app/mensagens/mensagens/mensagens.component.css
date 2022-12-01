@@ -1,0 +1,10 @@
+.issuer{
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+.received{
+    color:blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: unset;
+}

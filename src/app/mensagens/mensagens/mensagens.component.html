@@ -1,1 +1,14 @@
-<p>mensagens works!</p>
+<div class="container text-center">
+    <div class="row">
+      <div class="col" *ngFor="let user of users" (value)="user.userModelId">
+        {{user.name}}
+        <div *ngFor="let message of messages" >
+            <p class="issuer"*ngIf="isUser(message.userIssuerId, user.userModelId)"><strong >{{message.message}}</strong></p>
+            <p class="received" *ngIf="isUser(message.userReceiverId, user.userModelId)"><strong >{{message.message}}</strong></p>
+        </div>
+        <textarea name="messageUser" id="" cols="20" rows="3" (value)="user.userModelId" [(ngModel)]="messageUser"></textarea>
+        <button (click)="postMessage(user.userModelId )">Enviar</button>
+      </div>
+    </div>
+  </div>
+ 
